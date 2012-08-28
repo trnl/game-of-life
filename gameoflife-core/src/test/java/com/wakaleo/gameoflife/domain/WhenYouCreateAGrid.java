@@ -9,7 +9,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static com.wakaleo.gameoflife.domain.Cell.*;
 
-@Ignore("I'm not sure about that")
 public class WhenYouCreateAGrid {
 
     private static final String NEW_LINE = System.getProperty("line.separator");
@@ -17,12 +16,14 @@ public class WhenYouCreateAGrid {
     public static final String EMPTY_GRID = "..." + NEW_LINE + "..." + NEW_LINE + "..." + NEW_LINE;
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aNewGridShouldBeEmpty() {
         Grid grid = new Grid();
         assertThat(grid.toString(), is(EMPTY_GRID));
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void shouldBeAbleToSeedAGridWithAString() {
 
         String gridContents = "..." + NEW_LINE + "..." + NEW_LINE + "...";
@@ -34,6 +35,7 @@ public class WhenYouCreateAGrid {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void shouldBeAbleToSeedAGridWithANonEmptyString() {
 
         String gridContents = "*.." + NEW_LINE + ".*." + NEW_LINE + ".*.";
@@ -54,6 +56,7 @@ public class WhenYouCreateAGrid {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void shouldBeAbleToCountLiveNeighboursOfACellOnBoundaries() {
 
         String gridContents = ".*." + NEW_LINE + "*.." + NEW_LINE + "...";
@@ -63,6 +66,7 @@ public class WhenYouCreateAGrid {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void shouldBeAbleToCountLiveNeighboursOfACellInTheMiddleOfTheGrid() {
 
         String gridContents = "..." + NEW_LINE + "***" + NEW_LINE + "...";
