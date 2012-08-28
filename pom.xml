@@ -127,6 +127,7 @@
         <module>gameoflife-build</module>
         <module>gameoflife-core</module>
         <module>gameoflife-web</module>
+        <module>gameoflife-webservice</module>
         <module>gameoflife-cli</module>
     </modules>
     <distributionManagement>
