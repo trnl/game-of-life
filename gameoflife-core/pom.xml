@@ -10,5 +10,4 @@
     <artifactId>gameoflife-core</artifactId>
     <packaging>jar</packaging>
     <name>gameoflife-core</name>
-    <url>${HUDSON_URL}</url>
 </project>
