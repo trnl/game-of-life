@@ -10,12 +10,12 @@ import static com.wakaleo.gameoflife.domain.Universe.seededWith;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-@Ignore("I'm not sure about that")
 public class WhenYouPlayTheGameOfLife {
 
     private final String NEW_LINE = System.getProperty("line.separator");
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aDeadCellWithNoNeighboursShouldRemainDeadInTheNextGeneration() {
         String initialGrid = "..." + NEW_LINE +
                 "..." + NEW_LINE +
@@ -33,6 +33,7 @@ public class WhenYouPlayTheGameOfLife {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aDeadCellWithOneLiveNeighbourShouldRemainDeadInTheNextGeneration() {
         String initialGrid = "..." + NEW_LINE +
                 ".*." + NEW_LINE +
@@ -49,7 +50,9 @@ public class WhenYouPlayTheGameOfLife {
         assertThat(nextGrid, is(expectedNextGrid));
     }
 
+
     @Test
+    @Ignore("I'm not sure about that")
     public void liveCellaWith2or3iveNeighbourShouldRemainAliveInTheNextGeneration() {
         String initialGrid = "**." + NEW_LINE +
                 "**." + NEW_LINE +
@@ -66,7 +69,9 @@ public class WhenYouPlayTheGameOfLife {
         assertThat(nextGrid, is(expectedNextGrid));
     }
 
+
     @Test
+    @Ignore("I'm not sure about that")
     public void aLiveCellWithExactlyTwoLiveNeighbourShouldRemainAliveInTheNextGeneration() {
         String initialGrid = "..." + NEW_LINE +
                 "***" + NEW_LINE +

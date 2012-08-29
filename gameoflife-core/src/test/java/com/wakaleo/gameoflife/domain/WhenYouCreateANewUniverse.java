@@ -11,7 +11,7 @@ import static com.wakaleo.gameoflife.domain.Cell.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-@Ignore("I'm not sure about that")
+
 public class WhenYouCreateANewUniverse {
 
     private static final String NEW_LINE = System.getProperty("line.separator");
@@ -19,6 +19,7 @@ public class WhenYouCreateANewUniverse {
     public static final String EMPTY_GRID = "..." + NEW_LINE + "..." + NEW_LINE + "..." + NEW_LINE + "";
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aNewUniverseShouldContainOnlyDeadCells() {
         Universe theUniverse = new Universe();
         String currentGrid = theUniverse.getGrid();
@@ -26,6 +27,7 @@ public class WhenYouCreateANewUniverse {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aUniverseSeededWithAnEmpyGridContentWillContainAnEmptyGrid() {
 
         String seededGrid = "..." + NEW_LINE + "..." + NEW_LINE + "..." + NEW_LINE + "";
@@ -36,6 +38,7 @@ public class WhenYouCreateANewUniverse {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aUniverseCanBeInitializedWithAnyDimension() {
         String expectedGrid = "....." + NEW_LINE + "....." + NEW_LINE + "....." + NEW_LINE + "....." + NEW_LINE + "";
 
@@ -46,6 +49,7 @@ public class WhenYouCreateANewUniverse {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aUniverseSeededWithAGridContainingASingleLiveCellContentWillSpawnAnEmptyGrid() {
 
         String seededGrid = "..." + NEW_LINE + ".*." + NEW_LINE + "..." + NEW_LINE + "";
@@ -69,6 +73,7 @@ public class WhenYouCreateANewUniverse {
     }
 
     @Test
+    @Ignore("I'm not sure about that")
     public void aUniverseSpawnsANewGridInTheNextGeneration() {
 
         String seededGrid = "..." + NEW_LINE + "***" + NEW_LINE + "..." + NEW_LINE + "";
