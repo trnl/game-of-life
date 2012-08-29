@@ -5,6 +5,7 @@ import static com.wakaleo.gameoflife.domain.Cell.LIVE_CELL;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class WhenYouCreateACell {
@@ -13,6 +14,7 @@ public class WhenYouCreateACell {
     public void aLiveCellShouldBeRepresentedByAnAsterisk() {
         Cell cell = Cell.fromSymbol("*");
         assertThat(cell, is(LIVE_CELL));
+        assertThat(false, is(false));
     }
 
     @Test
