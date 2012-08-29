@@ -50,19 +50,63 @@
                 <version>2.7</version>
             </plugin>
 
-            <!-- CODE COVERAGE -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.5.1</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.0</version>
                 <configuration>
-                    <formats>
-                        <format>html</format>
-                        <format>xml</format>
-                    </formats>
+                    <reportPlugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-jxr-plugin</artifactId>
+                            <version>2.3</version>
+                        </plugin>
+
+                        <!-- CODE COVERAGE -->
+                        <plugin>
+                            <groupId>org.codehaus.mojo</groupId>
+                            <artifactId>cobertura-maven-plugin</artifactId>
+                            <version>2.5.1</version>
+                            <configuration>
+                                <format>xml</format>
+                                <check/>
+                            </configuration>
+                        </plugin>
+
+                        <!-- CHECKSTYLE -->
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-checkstyle-plugin</artifactId>
+                            <version>2.9.1</version>
+                        </plugin>
+
+
+                        <!-- PMD -->
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-pmd-plugin</artifactId>
+                            <version>2.7.1</version>
+                            <configuration>
+                                <linkXref>true</linkXref>
+                                <sourceEncoding>utf-8</sourceEncoding>
+                                <minimumTokens>100</minimumTokens>
+                                <targetJdk>1.6</targetJdk>
+                            </configuration>
+                        </plugin>
+
+                        <!-- FINDBUGS -->
+                        <plugin>
+                            <groupId>org.codehaus.mojo</groupId>
+                            <artifactId>findbugs-maven-plugin</artifactId>
+                            <version>2.5</version>
+                            <configuration>
+                                <effort>Max</effort>
+                                <xmlOutput>true</xmlOutput>
+                            </configuration>
+                        </plugin>
+                    </reportPlugins>
                 </configuration>
             </plugin>
-
         </plugins>
 
         <extensions>
@@ -102,52 +146,4 @@
         <module>gameoflife-cli</module>
     </modules>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
-
-            <!-- CHECKSTYLE -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.9.1</version>
-                <configuration>
-                    <configLocation>custom-checkstyle.xml</configLocation>
-                </configuration>
-            </plugin>
-
-            <!-- PMD -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>2.7.1</version>
-                <configuration>
-                    <targetJdk>1.6</targetJdk>
-                    <aggregate>true</aggregate>
-                    <format>xml</format>
-                    <rulesets>
-                        <ruleset>pmd-rules.xml</ruleset>
-                    </rulesets>
-                    <!-- CPD options -->
-                    <minimumTokens>20</minimumTokens>
-                    <ignoreIdentifiers>true</ignoreIdentifiers>
-                </configuration>
-            </plugin>
-
-            <!-- FINDBUGS -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.5</version>
-                <configuration>
-                    <effort>Max</effort>
-                    <xmlOutput>true</xmlOutput>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 </project>
