@@ -165,10 +165,6 @@ public class WhenYouCreateAGrid {
 
         assertThat(grid.getCellAt(1, 1), is(LIVE_CELL));
     }
-    
-    @Test
-    public void failingTest() {
-        assertThat(true, is(false));        
-    }
+
 
 }
