@@ -5,6 +5,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertTrue;
 
 
 public class WhenDisplayingTheHomePage {
@@ -14,6 +15,7 @@ public class WhenDisplayingTheHomePage {
         HomePageController controller = new HomePageController();
         ModelAndView homeView = controller.home();
         assertThat(homeView.getViewName(), is("home"));
+        assertTrue(false);
     }
 
     @Test
